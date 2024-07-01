@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @font-face {
+            font-family: 'BRONSON-Black';
+            src: url('./fonts/BRONSON-Black.ttf') format('ttf'),
+                url('./fonts/BRONSON-Black.woff') format('woff'), url('./fonts/BRONSON-Black.otf') format('otf');
+        }
+
+        body {
+            background-image: url(./image/background-paper.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            font-family: 'BRONSON-Black';
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .mainBox {
+            width: 100%;
+            height: 100%;
+        }
+
+        .topBox {
+            background-color: #172833;
+            width: auto;
+            height: 800px;
+            margin: 0 30px;
+        }
+
+        .top_Man {
+            position: absolute;
+            top: -450px;
+        }
+
+        .top_gutli {
+            position: absolute;
+            top: 0;
+            text-align: center;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+
+        .top_gutli img {
+            width: 18%;
+        }
+
+        .top_Man img {
+            width: 100%;
+        }
+
+        .top_welcomeText {
+            position: absolute;
+            top: 290px;
+            font-size: clamp(2rem, 7.5rem, 7.5rem);
+            color: #FFF;
+            text-align: center;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+
+        .topBanner_line {
+            position: absolute;
+            top: -1700px;
+            text-align: center;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+
+        .logoBox {
+            position: absolute;
+            text-align: center;
+            left: 0;
+            right: 0;
+            margin: -300px auto;
+        }
+
+        .logoImage img {
+            width: 50%;
+            height: 50%;
+        }
+
+        .middleBox {
+            background-image: url(./image/img2.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 1920px;
+            height: 1920px;
+            margin: 0px 30px;
+        }
+
+        .middleImage {
+            position: absolute;
+            top: 2100px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: 0 400px;
+        }
+
+        .bottomBox {
+            background-color: #fec719;
+            padding: 50px;
+            margin: 20px 40px;
+        }
+
+        .bottomText {
+            font-size: clamp(2rem, 5vw, 5rem);
+            line-height: 1em;
+            text-align: center;
+            color: #172833;
+        }
+
+        .savePart {
+            position: absolute;
+            width: 100%;
+            background: #fec719;
+            margin: 0 30px;
+            text-align: center;
+            padding: 100px 0px;
+        }
+
+        .savePart span {
+            font-size: clamp(2rem, 8vw, 8rem);
+            color: #172833;
+            text-align: center;
+        }
+
+        .DatePart {
+            position: absolute;
+            background: #172833;
+            margin: 0 30px;
+            text-align: center;
+            padding: 20px 0px;
+        }
+
+        .DatePart span {
+            font-size: clamp(2rem, 8vw, 8rem);
+            color: #fec719;
+            text-align: center;
+        }
+
+        .octPart {
+            position: absolute;
+            background: #172833;
+            margin: 0 30px;
+            text-align: center;
+            padding: 20px 0px;
+        }
+
+        .octPart span {
+            font-size: clamp(2rem, 8vw, 8rem);
+            color: #fec719;
+            text-align: center;
+        }
+
+        .text1 {
+            color: #fec719;
+            font-size: clamp(1.5rem, 4.208vw, 4rem);
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .textBox1,
+        .textBox2,
+        .textBox3 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .julyMonthText,
+        .julyToAugMonthText,
+        .sepMonthText {
+            font-size: clamp(2rem, 3vw, 3rem);
+            padding-top: 30px;
+            color: #FFF;
+        }
+
+        .julyMonthBox,
+        .sepMonthBox {
+            font-size: clamp(2rem, 2.5vw, 2.5rem);
+            padding: 20px 100px;
+            background: #fec719;
+            border-radius: 100px;
+            color: #172833;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="mainBox">
+        <div class="topBox">
+            <div class="topBanner_line"><img src="./image/yellow-strips.png" alt=""></div>
+            <div class="manBox">
+                <div class="top_gutli"><img src="./image/single-gutli.png" alt=""></div>
+                <div class="top_welcomeText">WELCOME TO</div>
+                <div class="top_Man"><img src="./image/img1.png" alt=""></div>
+            </div>
+        </div>
+        <div class="logoBox">
+            <div class="logoImage"><img src="./image/gutli-logo.png" alt=""></div>
+        </div>
+        <!-- <div class="saveBox">
+            <div class="savePart"><span>SAVE THE DATE</span></div>
+            <div class="DatePart"><span>19th and 20th</span></div>
+            <div class="octPart"><span>October 2024</span></div>
+        </div> -->
+        <div class="middleBox" style="margin-top: 400px;">
+            <div class="middleImage">
+                <div class="text1">HERE’S EVERYTHING<br /> YOU NEED TO KNOW</div>
+                <div class="">
+                    <div class="julyMonthText">JULY</div>
+                    <div class="julyMonthBox"><span>ANNOUNCEM ENT OF THE BRIEFS</span></div>
+                </div>
+                <div class="textBox2">
+                    <div class="julyToAugMonthText">JULY To AUGUST</div>
+                    <div class="julyMonthBox"><span>CALL FOR ENTRIES AND<br> LAUNCH OF PODCAST</span></div>
+                </div>
+                <div class="textBox3">
+                    <div class="sepMonthText">SEPTEMBER</div>
+                    <div class="sepMonthBox"><span>JUDGING</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottomBox">
+            <div class="bottomText">LOOKING FORW ARD TO WELCOMING YOU AND YOUR TEAM</div>
+        </div>
+    </div>
+</body>
+
+</html>
