@@ -5,22 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link href="https://db.onlinewebfonts.com/c/35115fcfe3dd2774fb699a25203a264a?family=BRONSON+Black" rel="stylesheet">
     <style>
-        @font-face {
+        /* @font-face {
             font-family: 'BRONSON-Black';
             src: url('./fonts/BRONSON-Black.ttf') format('ttf'),
                 url('./fonts/BRONSON-Black.woff') format('woff'), url('./fonts/BRONSON-Black.otf') format('otf');
-        }
+        } */
 
         body {
             background-image: url(./image/background-paper.jpg);
             background-repeat: no-repeat;
-            background-size: 100% 100%;
-            font-family: 'BRONSON-Black';
+            background-size: cover;
+            font-family: "BRONSON Black", sans-serif;;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            font-weight: 900;
         }
 
         .mainBox {
@@ -38,8 +39,17 @@
         .top_Man {
             position: absolute;
             top: -450px;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
         }
-
+        .top_Man img{
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
         .top_gutli {
             position: absolute;
             top: 0;
@@ -47,20 +57,22 @@
             left: 0;
             right: 0;
             margin: 0 auto;
-        }
-
-        .top_gutli img {
-            width: 18%;
-        }
-
-        .top_Man img {
             width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .top_gutli img{
+            width: 20%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         .top_welcomeText {
             position: absolute;
-            top: 290px;
-            font-size: clamp(2rem, 7.5rem, 7.5rem);
+            top: 280px;
+            font-size: 120px;
             color: #FFF;
             text-align: center;
             left: 0;
@@ -70,11 +82,19 @@
 
         .topBanner_line {
             position: absolute;
-            top: -1700px;
+            top: -1700px; 
             text-align: center;
-            margin: 0 auto;
             left: 0;
             right: 0;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        .topBanner_line img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         .logoBox {
@@ -82,91 +102,97 @@
             text-align: center;
             left: 0;
             right: 0;
-            margin: -300px auto;
+            /* margin: -300px auto; */
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            top: 550px;
         }
 
         .logoImage img {
             width: 50%;
-            height: 50%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         .middleBox {
-            background-image: url(./image/img2.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 1920px;
-            height: 1920px;
+            position: relative;
+            background-size: cover;
+            width: 100%;
+            height: auto;
             margin: 0px 30px;
         }
 
         .middleImage {
+            text-align: center;
+            margin: 0 auto;
             position: absolute;
-            top: 2100px;
+            top: 720px;
             left: 0;
             right: 0;
-            text-align: center;
-            margin: 0 400px;
         }
 
         .bottomBox {
-            background-color: #fec719;
+            background-color: rgb(254 199 25 / 80%);
             padding: 50px;
             margin: 20px 40px;
         }
 
         .bottomText {
-            font-size: clamp(2rem, 5vw, 5rem);
+            font-size: 100px;
             line-height: 1em;
             text-align: center;
             color: #172833;
+            padding: 50px 100px 10px 100px;
         }
 
         .savePart {
-            position: absolute;
-            width: 100%;
-            background: #fec719;
-            margin: 0 30px;
+            width: 96%;
+            background: rgb(254 199 25 / 80%);
+            margin: 0px auto;
             text-align: center;
-            padding: 100px 0px;
+            padding: 110px 10px 70px 10px;
         }
-
         .savePart span {
-            font-size: clamp(2rem, 8vw, 8rem);
+            font-size: 100px;
             color: #172833;
             text-align: center;
         }
 
         .DatePart {
-            position: absolute;
+            width: 45%;
             background: #172833;
             margin: 0 30px;
             text-align: center;
-            padding: 20px 0px;
+            padding: 10px 10px 0px 10px;
         }
-
         .DatePart span {
-            font-size: clamp(2rem, 8vw, 8rem);
+            font-size: 80px;
             color: #fec719;
             text-align: center;
         }
 
         .octPart {
-            position: absolute;
+            width: 35%;
             background: #172833;
             margin: 0 30px;
             text-align: center;
-            padding: 20px 0px;
+            padding: 10px 10px 0px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .octPart span {
-            font-size: clamp(2rem, 8vw, 8rem);
+            font-size: 60px;
             color: #fec719;
             text-align: center;
         }
 
         .text1 {
             color: #fec719;
-            font-size: clamp(1.5rem, 4.208vw, 4rem);
+            font-size: 60px;
             font-weight: 900;
             text-align: center;
         }
@@ -178,7 +204,7 @@
             flex-direction: column;
             gap: 10px;
             align-items: center;
-            padding-top: 80px;
+            padding-top: 70px;
         }
 
         .julyMonthText,
@@ -189,14 +215,670 @@
             color: #FFF;
         }
 
-        .julyMonthBox,
-        .sepMonthBox {
-            font-size: clamp(2rem, 2.5vw, 2.5rem);
-            padding: 20px 100px;
-            background: #fec719;
+        .julyMonthBox {
+            font-size: 34px;
+            padding: 28px 70px 20px 80px;
+            background: rgb(254 199 25 / 70%);
             border-radius: 100px;
             color: #172833;
         }
+        .julyMonthBox2 {
+            font-size: 34px;
+            padding: 23px 120px 15px 140px;
+            background: rgb(254 199 25 / 70%);
+            border-radius: 100px;
+            color: #172833;
+        }
+        .sepMonthBox {
+            font-size: 34px;
+            padding: 23px 50px 15px 50px;
+            background: rgb(254 199 25 / 70%);
+            border-radius: 100px;
+            color: #172833;
+        }
+
+        .saveBox {
+            margin-top: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .backstrip1 {
+            position: absolute;
+            top: -500px;
+            right: -280px;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            z-index: -1;
+        }
+        .backstrip1 img{
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .backstrip2 {
+            position: absolute;
+            top: -500px;
+            left: -350px;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            z-index: -1;
+        }
+        .backstrip2 img{
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .backstrip2 img {
+            transform: scaleX(-1);
+        }
+
+        .middleBg {
+            width: 96%;
+            max-width: 100%;
+            height: auto;
+        }
+        .middleBg img {
+            width: 99%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width: 1440px) {
+           .topBanner_line{
+                top: -1280px;
+           }
+           .top_Man{
+                top: -160px;
+           }
+           .top_welcomeText{
+                top: 380px;
+                font-size: 100px;
+           }
+           .top_gutli{
+                top: 90px;
+           }
+           .logoBox{
+                top: 560px;
+           }
+           .DatePart {
+            width: 55%;
+            }
+            .octPart {
+                width: 45%;
+            }
+
+            .middleImage{
+                top: 550px;
+            }
+            .textBox1, .textBox2, .textBox3{
+                gap: 0px;
+                padding-top: 25px;
+            }
+            .bottomText {
+                font-size: 80px;
+                line-height: 1em;
+                text-align: center;
+                color: #172833;
+                padding: 50px 50px 30px 60px;
+            }
+        }
+        @media only screen and (max-width: 1280px) {
+            .topBanner_line{
+                top: -1120px;
+                left: 120px;
+            }
+            .top_Man{
+                top: -60px;
+            }
+            .top_welcomeText{
+                top: 440px;
+                font-size: 80px;
+                left: 70px;
+            }
+            .top_gutli{
+                top: 160px;
+           }
+            .top_gutli img{
+                width: 25%;;
+           }
+           .logoBox{
+                top: 570px;
+           }
+           .saveBox{
+                margin-top: 300px;
+           }
+           .DatePart {
+            width: 65%;
+            }
+            .octPart {
+                width: 55%;
+            }
+            .middleImage {
+                top: 470px;
+            }
+            .text1{
+                font-size: 45px;
+            }
+            .textBox1, .textBox2, .textBox3 {
+                gap: 0px;
+                padding-top: 10px;
+            }
+            .julyMonthText, .julyToAugMonthText, .sepMonthText{
+                font-size: 35px;
+            }
+            .julyMonthBox, .julyMonthBox2, .sepMonthBox{
+                font-size: 30px;
+            }
+            .bottomText {
+                font-size: 70px;
+                padding: 30px 40px 10px 40px;
+            }
+        }
+        @media only screen and (max-width: 1024px) {
+            .topBanner_line{
+                top: -910px;
+                left: 50px;
+            }
+            .topBox{
+                height: 600px;
+           }
+            .top_Man{
+                top: -80px;
+            }
+            .top_welcomeText{
+                top: 290px;
+                font-size: 75px;
+                left: 70px;
+            }
+            .top_gutli{
+                top: 50px;
+           }
+           .logoBox{
+                top: 450px;
+           }
+           .logoBox img{
+                width: 50%;
+           }
+           .savePart {
+                padding: 90px 10px 50px 10px;
+            }
+            .savePart span {
+                font-size: 80px;
+            }
+            .DatePart span{
+                font-size: 60px;
+            }
+            .octPart span{
+                font-size: 50px;
+            }
+            .backstrip1, .backstrip2{
+                top: -400px;
+            }
+            .middleImage {
+                top: 380px;
+            }
+            .text1 {
+                font-size: 35px;
+            }
+            .textBox1, .textBox2, .textBox3 {
+                gap: 0px;
+                padding-top: 15px;
+            }
+            .julyMonthText, .julyToAugMonthText, .sepMonthText {
+                font-size: 26px;
+            }
+            .julyMonthBox, .julyMonthBox2, .sepMonthBox {
+                font-size: 24px;
+                padding: 18px 40px 10px 50px;
+            }
+            .bottomText {
+                font-size: 50px;
+                padding: 10px 20px 0px 20px;
+            }
+            .bottomBox{
+                margin: 20px 15px 10px 35px;
+            }
+           
+        }
+        @media only screen and (max-width: 800px) {
+            .topBox{
+                height: 450px;
+           }
+            .topBanner_line{
+                top: -680px;
+            }
+            .top_Man{
+                top: -65px;
+            }
+            .top_welcomeText{
+                top: 220px;
+                font-size: 60px;
+            }
+            .logoBox {
+                top: 340px;
+                left: -20px;
+            }
+            .logoBox img {
+                width: 48%;
+            }
+            .saveBox {
+                margin-top: 200px;
+            }
+            .savePart span {
+                font-size: 60px;
+            }
+            .DatePart span {
+                font-size: 50px;
+            }
+            .octPart {
+                width: 55%;
+            }
+            .octPart span {
+                font-size: 40px;
+            }
+            .savePart {
+                padding: 70px 10px 50px 10px;
+            }
+            .backstrip1{
+                top: -250px;
+                right: -150px;
+            }
+            .backstrip2{
+                top: -250px;
+                left: -150px;
+            }
+            .middleImage {
+                top: 280px;
+            }
+            .text1 {
+                font-size: 30px;
+            }
+            .textBox1, .textBox2, .textBox3 {
+                gap: 0px;
+                padding-top: 0px;
+            }
+            .julyMonthText, .julyToAugMonthText, .sepMonthText {
+                font-size: 22px;
+            }
+            .julyMonthBox, .julyMonthBox2, .sepMonthBox {
+                font-size: 20px;
+                padding: 12px 40px 5px 50px;
+            }
+            .middleBox{
+                margin: 0px 15px;  
+            }
+            .bottomBox{
+                padding: 40px;
+            }
+            .bottomText {
+                font-size: 40px;
+                padding: 0px 20px 0px 20px;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+             .topBox{
+                height: 450px;
+                margin: 0 10px;
+           }
+            .topBanner_line{
+                top: -680px;
+            }
+            .top_Man{
+                top: -65px;
+            }
+            .top_welcomeText{
+                top: 220px;
+                font-size: 60px;
+            }
+            .logoBox {
+                top: 340px;
+                left: -20px;
+            }
+            .logoBox img {
+                width: 48%;
+            }
+            .saveBox {
+                margin-top: 200px;
+            }
+            .savePart span {
+                font-size: 60px;
+            }
+            .DatePart span {
+                font-size: 50px;
+            }
+            .octPart {
+                width: 55%;
+            }
+            .octPart span {
+                font-size: 40px;
+            }
+            .savePart {
+                padding: 70px 10px 50px 10px;
+            }
+            .backstrip1{
+                top: -250px;
+                right: -150px;
+            }
+            .backstrip2{
+                top: -250px;
+                left: -150px;
+            }
+            .middleImage {
+                top: 280px;
+            }
+            .text1 {
+                font-size: 30px;
+            }
+            .textBox1, .textBox2, .textBox3 {
+                gap: 0px;
+                padding-top: 0px;
+            }
+            .julyMonthText, .julyToAugMonthText, .sepMonthText {
+                font-size: 22px;
+            }
+            .julyMonthBox, .julyMonthBox2, .sepMonthBox {
+                font-size: 20px;
+                padding: 12px 40px 5px 50px;
+            }
+            .middleBox{
+                margin: 0px 15px;  
+            }
+            .bottomBox{
+                padding: 40px;
+            }
+            .bottomText {
+                font-size: 40px;
+                padding: 0px 20px 0px 20px;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+             .topBox{
+                height: 400px;
+           }
+            .topBanner_line{
+                top: -500px;
+            }
+            .top_Man{
+                top: -10px;
+            }
+            .top_welcomeText{
+                top: 210px;
+                font-size: 45px;
+            }
+            .top_gutli{
+                top: 80px;
+           }
+           .logoBox {
+                top: 310px;
+                left: -20px;
+            }
+            .logoBox img {
+                width: 48%;
+            }
+            .saveBox {
+                margin-top: 170px;
+            }
+            .savePart {
+                    width: 90%;
+                padding: 50px 10px 30px 10px;
+            }
+            .savePart span {
+                font-size: 45px;
+            }
+            .DatePart {
+                width: 60%;
+            }
+            .DatePart span {
+                font-size: 35px;
+            }
+            .octPart {
+                width: 55%;
+            }
+            .octPart span {
+                font-size: 30px;
+            }
+            .backstrip1 {
+                top: -160px;
+                right: -130px;
+            }
+            .backstrip2 {
+                top: -160px;
+                left: -130px;
+            }
+            .middleImage {
+                top: 225px;
+            }
+            .text1 {
+                font-size: 22px;
+            }
+            .textBox1, .textBox2, .textBox3 {
+                gap: 0px;
+                padding-top: 0px;
+            }
+            .julyMonthText, .julyToAugMonthText, .sepMonthText {
+                font-size: 18px;
+            }
+            .julyMonthBox, .julyMonthBox2, .sepMonthBox {
+                font-size: 16px;
+                padding: 8px 20px 3px 30px;
+            }
+            .julyMonthText, .julyToAugMonthText, .sepMonthText {
+                padding-top: 25px;
+            }
+            .bottomBox {
+                padding: 20px;
+                margin: 20px 15px 10px 20px;
+            }
+            .bottomText {
+                font-size: 30px;
+                padding: 10px 20px 0px 20px;
+            }
+        }
+        @media only screen and (max-width: 568px) {
+             .topBox{
+                height: 350px;
+           }
+            .topBanner_line{
+                top: -500px;
+            }
+            .top_Man{
+                top: -30px;
+            }
+            .top_welcomeText{
+                top: 180px;
+                font-size: 45px;
+            }
+            .top_gutli{
+                top: 50px;
+           }
+            .logoBox {
+                top: 270px;
+                left: -10px;
+            }
+            .savePart {
+                padding: 50px 10px 30px 10px;
+            }
+            .savePart span {
+                font-size: 40px;
+            }
+            .DatePart {
+                width: 60%;
+            }
+            .DatePart span {
+                font-size: 32px;
+            }
+            .octPart {
+                width: 55%;
+            }
+            .octPart span {
+                font-size: 28px;
+            }
+            .middleImage {
+                top: 212px;
+            }
+            .julyMonthText, .julyToAugMonthText, .sepMonthText {
+                padding-top: 20px;
+            }
+            .bottomBox {
+                padding: 10px;
+                margin: 20px 15px 10px 20px;
+            }
+            .bottomText {
+                font-size: 26px;
+                padding: 10px 20px 0px 10px;
+            }
+        }
+        @media only screen and (max-width: 425px) {
+            .topBox{
+                height: 300px;
+            }
+            .topBanner_line{
+                top: -375px;
+                left: 20px;
+            }
+            .top_Man{
+                top: 15px;
+            }
+            .top_welcomeText{
+                top: 160px;
+                font-size: 35px;
+                left: 30px;
+            }
+            .top_gutli{
+                top: 40px;
+           }
+            .top_gutli img{
+                width: 30%;
+           }
+            .logoBox {
+                top: 240px;
+                left: -10px;
+            }
+            .savePart {
+                width: 90%;
+                padding: 50px 10px 30px 10px;
+            }
+            .saveBox {
+                margin-top: 120px;
+            }
+            .DatePart span {
+                font-size: 24px;
+            }
+            .octPart {
+                width: 55%;
+            }
+            .octPart span {
+                font-size: 22px;
+            }
+            .savePart span {
+                font-size: 30px;
+            }
+            .middleBox{
+                margin: 0 0px;
+            }
+            .middleBg{
+                width: 100%;
+            }
+            .middleImage {
+                top: 170px;
+            } 
+            .text1 {
+                font-size: 16px;
+            }
+            .textBox1, .textBox2, .textBox3 {
+                gap: 0px;
+                padding-top: 2px;
+            }
+            .julyMonthText, .julyToAugMonthText, .sepMonthText {
+                padding-top: 14px;
+                font-size: 12px;
+            }
+            .julyMonthBox, .julyMonthBox2, .sepMonthBox {
+                font-size: 10px;
+                padding: 10px 20px 4px 20px;
+            }
+            .bottomBox {
+                padding: 10px;
+                margin: 20px 5px 10px 5px;
+            }
+            .bottomText {
+                font-size: 22px;
+                padding: 10px 10px 0px 10px;
+            }
+        }
+        @media only screen and (max-width: 375px) {
+            .topBox{
+                height: 300px;
+            }
+            .topBanner_line{
+                top: -330px;
+                left: 20px;
+            }
+            .top_Man{
+                top: 45px;
+            }
+            .top_welcomeText{
+                top: 170px;
+                font-size: 32px;
+                left: 30px;
+            }
+            .top_gutli{
+                top: 40px;
+           }
+            .top_gutli img{
+                width: 40%;
+           }
+            .logoBox {
+                top: 250px;
+                left: -10px;
+            }
+            .savePart {
+                width: 88%;
+                padding: 50px 10px 30px 10px;
+            }
+            .savePart span {
+                font-size: 24px;
+            }
+            .DatePart {
+                width: 60%;
+            }
+            .DatePart span {
+                font-size: 22px;
+            }
+            .octPart {
+                width: 55%;
+            }
+            .octPart span {
+                font-size: 20px;
+            }
+            .middleImage {
+                top: 145px;
+            }
+            .julyMonthText, .julyToAugMonthText, .sepMonthText {
+                padding-top: 8px;
+                font-size: 12px;
+            }
+            .bottomBox {
+                padding: 10px;
+                margin: 20px 5px 10px 5px;
+            }
+            .bottomText {
+                font-size: 20px;
+                padding: 10px 10px 0px 10px;
+            }
+        }
+
     </style>
 
 </head>
@@ -214,21 +896,24 @@
         <div class="logoBox">
             <div class="logoImage"><img src="./image/gutli-logo.png" alt=""></div>
         </div>
-        <!-- <div class="saveBox">
+        <div class="saveBox">
             <div class="savePart"><span>SAVE THE DATE</span></div>
-            <div class="DatePart"><span>19th and 20th</span></div>
+            <div class="DatePart"><span>19<sup>th</sup> and 20<sup>th</sup></span></div>
             <div class="octPart"><span>October 2024</span></div>
-        </div> -->
-        <div class="middleBox" style="margin-top: 400px;">
+        </div>
+        <div class="middleBox">
+            <div class="backstrip1"><img src="./image/yellow-strips.png" alt=""></div>
+            <div class="backstrip2"><img src="./image/yellow-strips.png" alt=""></div>
+            <div class="middleBg"><img src="./image/img3.png" alt=""></div>
             <div class="middleImage">
                 <div class="text1">HERE’S EVERYTHING<br /> YOU NEED TO KNOW</div>
-                <div class="">
+                <div class="textBox1">
                     <div class="julyMonthText">JULY</div>
                     <div class="julyMonthBox"><span>ANNOUNCEM ENT OF THE BRIEFS</span></div>
                 </div>
                 <div class="textBox2">
-                    <div class="julyToAugMonthText">JULY To AUGUST</div>
-                    <div class="julyMonthBox"><span>CALL FOR ENTRIES AND<br> LAUNCH OF PODCAST</span></div>
+                    <div class="julyToAugMonthText">JULY TO AUGUST</div>
+                    <div class="julyMonthBox2"><span>CALL FOR ENTRIES AND<br> LAUNCH OF PODCAST</span></div>
                 </div>
                 <div class="textBox3">
                     <div class="sepMonthText">SEPTEMBER</div>
@@ -237,7 +922,7 @@
             </div>
         </div>
         <div class="bottomBox">
-            <div class="bottomText">LOOKING FORW ARD TO WELCOMING YOU AND YOUR TEAM</div>
+            <div class="bottomText">LOOKING FORWARD TO WELCOMING YOU AND YOUR TEAM</div>
         </div>
     </div>
 </body>
